@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  font-family: "outfit";
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+:root {
+  --primary-color: #071952;
+  --secondary-color: #088395;
+  --accent-color: #37b7c3;
+  --background-color: #ebf4f6;
+}
+html {
+  scroll-behavior: smooth;
+}

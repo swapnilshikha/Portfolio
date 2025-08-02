@@ -1,0 +1,121 @@
+.home {
+  display: flex;
+  margin-top: 30vh;
+  color: var(--background-color);
+  padding: 1vh 1vw;
+}
+
+.home-left {
+  display: flex;
+  flex: 1.5;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-left .heading {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.home-left h1 {
+  text-align: center;
+  width: 70%;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.home-left .name {
+  background: linear-gradient(270deg, #37b7c3 10%, #6587f6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-left .type {
+  background: linear-gradient(270deg, #37b7c3 10%, #6587f6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-left .home-action {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  width: 100%;
+  justify-content: center;
+  font-size: 2.7vh;
+  font-weight: 500;
+}
+
+.home-left .home-connect {
+  padding: 2.7vh 3vw;
+  border-radius: 5vh;
+  background: linear-gradient(264deg, #37b7c3 -5.09%, #6587f6 106.28%);
+  cursor: pointer;
+}
+
+.home-left .home-resume {
+  padding: 2.7vh 3vw;
+  border-radius: 5vh;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.home-connect:hover {
+  border: 2px solid white;
+}
+
+.home-resume:hover {
+  border-color: #37b7c3;
+}
+
+.home-right {
+  display: flex;
+  flex: 1.5;
+  padding: 2vh 2vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .home-right img {
+  height: 45vh;
+  width: 43.5vh;
+  border-radius: 50%;
+  animation: profile_animate 5s ease-in-out infinite 0.7s;
+  box-shadow: 8px 8px 15px #5abff691, -8px -8px 15px #60b6f3a0;
+}
+
+@keyframes profile_animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    flex-direction: column;
+  }
+  .home-right {
+    margin-top: 20vh;
+  }
+  .type{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (width<1000px) {
+  .home-left .type {
+    font-size: 6vh;
+  }
+}

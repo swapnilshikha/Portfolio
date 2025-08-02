@@ -1,0 +1,42 @@
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(113, 125, 229, 0.1);
+  backdrop-filter: blur(19px) saturate(180%);
+  padding: 2vh 2vw;
+  border-radius: 10px;
+  width: 60%;
+}
+
+.each-skill {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 45px;
+  row-gap: 30px;
+}
+
+.skill-category-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  color: var(--accent-color);
+  font-size: 3.5vh;
+  font-weight: 500;
+  font-family: "Outfit";
+}
+
+.skill-category-title:hover {
+  color: var(--secondary-color);
+}
+
+@media (max-width: 500px) {
+  .skill-category {
+    width: 80%;
+
+  }
+  .each-skill {
+    margin: 5px;
+    padding: 2vh 2vw;
+  }
+}

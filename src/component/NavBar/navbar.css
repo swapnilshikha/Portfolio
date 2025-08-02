@@ -1,0 +1,143 @@
+.navbar {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.567);
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh 1vw;
+}
+
+.logo span {
+  color: var(--accent-color);
+  font-family: Outfit;
+  font-size: 4vh;
+  font-weight: 500;
+}
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-5px) rotateX(-10deg) rotateY(10deg) scale(1.05);
+}
+.logo span:hover {
+  color: var(--secondary-color);
+}
+
+.navbar .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 1vw;
+}
+
+.content .item {
+  color: var(--background-color);
+  display: flex;
+  margin: 0px 8px;
+  position: relative;
+  align-items: center;
+  gap: 1vw;
+  padding: 1vh 1vw;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  background-color: black;
+  z-index: 10;
+  padding: 3px;
+}
+
+.mobile-navbar {
+  color: var(--accent-color);
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.mobile-navbar:hover {
+  transform: translateY(-5px);
+}
+
+.mobile-menu-content {
+  display: flex;
+  margin: 50px 20px;
+  flex-direction: column;
+}
+
+.mobile-menu-content .item {
+  color: var(--background-color);
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+.mobile-menu-content hr {
+  margin: 2px 0px;
+  display: none;
+}
+
+@media (width>500px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar .content {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .menu i {
+    color: var(--accent-color);
+  }
+}
+
+.content .item::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: width 0.5s ease-in-out;
+}
+
+.content .item:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-content .item::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: width 0.5s ease-in-out;
+}
+
+.mobile-menu-content .item:hover::after {
+  width: 100%;
+}
+
+.item:hover {
+  color: var(--secondary-color);
+}
